@@ -406,7 +406,7 @@ function can_produce(currency) {
 }
 
 function get_bit_production() {
-	return Math.pow(1.5, game.upgrades[0]) * get_total_file_boost() * get_words_boost()
+	return Math.pow(2.5, game.upgrades[0]) * get_total_file_boost() * get_words_boost()
 }
 
 function get_bit_capacity() {
@@ -419,7 +419,7 @@ function lock_bits_production() {
 }
 
 function get_byte_production() {
-	return 0.5 * Math.pow(1.5, game.upgrades[2]) * get_total_file_boost() * get_words_boost()
+	return 0.5 * Math.pow(2.5, game.upgrades[2]) * get_total_file_boost() * get_words_boost()
 }
 
 function update_upgrade(id) {
@@ -428,7 +428,7 @@ function update_upgrade(id) {
 	if (id == 1) message = "Increase the bit production by 50%."
 	if (id == 2) message = "Increase the bit capacity by 50%."
 	if (id == 3) message = "Increase the byte production by 50%."
-	message += "<br><br>Level: " + game.upgrades[id - 1] + "<br>Currently: " + format(Math.pow(1.5, game.upgrades[id - 1]), 1) + "x"
+	message += "<br><br>Level: " + game.upgrades[id - 1] + "<br>Currently: " + format(Math.pow(2.5, game.upgrades[id - 1]), 1) + "x"
 	document.getElementById("upgrade_" + id).innerHTML = message
 	document.getElementById("upgrade_" + id + "_button").textContent = "Cost: " + format(get_upgrade_cost(id)) + " bytes"
 }
