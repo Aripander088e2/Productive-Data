@@ -434,9 +434,9 @@ function update_upgrade(id) {
 }
 
 function get_upgrade_cost(id) {
-	if (id == 1) return Math.pow(2, game.upgrades[0] + 1) / get_total_computer_boost()
-	if (id == 2) return Math.pow(1.5, game.upgrades[1]) * 2
-	if (id == 3) return Math.pow(2, game.upgrades[2] + 3) / get_total_computer_boost()
+	if (id == 1) return Math.pow(1.5, game.upgrades[0] + 1) / get_total_computer_boost()
+	if (id == 2) return Math.pow(1.25, game.upgrades[1]) * 2
+	if (id == 3) return Math.pow(1.5, game.upgrades[2] + 3) / get_total_computer_boost()
 }
 
 function buy_upgrade(id) {
